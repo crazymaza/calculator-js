@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js" defer></script> -->
+    <script src="script-refactoring.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cabin&display=swap" rel="stylesheet">
+    <title>Калькулятор</title>
+</head>
+
+<body>
+    <main>
+        <div class="calculator">
+            <input minlength="1" maxlength="10" disabled>
+            <table class="keyboard">
+                <tbody>
+                    <tr>
+                        <td><button disabled class="top-button">off</button></td>
+                        <td><button disabled class="top-button">mu</button></td>
+                        <td><button disabled class="top-button">gt</button></td>
+                        <td><button disabled class="top-button">on/ce</button></td>
+                        <td><button class="top-button clear">ac</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>mrc</button></td>
+                        <td><button>m-</button></td>
+                        <td><button>m+</button></td>
+                        <td><button disabled>&#8883;</button></td>
+                        <td><button>+/-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>%</button></td>
+                        <td><button>&#8730;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>x</button></td>
+                        <td><button>&#247;</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td rowspan="2"><button class="big-button-h">+</button></td>
+                        <td><button>-</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="big-button-w">0</button></td>
+                        <td><button>.</button></td>
+                        <td><button>=</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+:root {
+    --calc-width: 465px;
+    --calc-height: 710px;
+    --calc-border-radius: 50px;
+    --primary-color: #F6E7E4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cabin', serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    border: 5px solid #f6cfc7;
+    border-radius: var(--calc-border-radius);
+    width: var(--calc-width);
+    height: var(--calc-height);
+    box-sizing: border-box;
+    padding-top: 30px;
+    background-color: var(--primary-color);
+    box-shadow: inset 0px 0px 3px 2px #ea9a8a;
+}
+
+.calculator input {
+    width: calc(var(--calc-width) - 67px);
+    height: 113px;
+    background: gray;
+    border-radius: 20px;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 70px;
+    font-family: 'Black Ops One', sans-serif;
+    text-align: right;
+}
+
+.keyboard {
+    width: inherit;
+    height: calc(var(--calc-height) - 190px);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+tbody {
+    text-align: center;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px gray;
+}
+
+button:active {
+    box-shadow: inset 0 -1px 1px rgba(0, 0, 0, .1),
+        inset 0 1px 1px rgba(0, 0, 0, .3),
+        inset 0 0 0 1px rgba(0, 0, 0, .45);
+}
+
+button.top-button {
+    height: 40px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+button.clear {
+    background-color: #F9C08C;
+    color: white;
+}
+
+button.big-button-w,
+button.big-button-h {
+    border-radius: 30px;
+}
+
+button.big-button-w {
+    width: 150px;
+}
+
+button.big-button-h {
+    height: 150px;
+}
