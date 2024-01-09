@@ -18,6 +18,35 @@ body {
     align-items: center;
 }
 
+main {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.history {
+    width: 300px;
+    height: var(--calc-height);
+    overflow-y: auto;
+    text-wrap: wrap;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 gray;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.history_title {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.history_result {
+    margin-bottom: 5px;
+}
+
 .calculator {
     display: flex;
     flex-direction: column;

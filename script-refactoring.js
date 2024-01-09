@@ -3,7 +3,10 @@
  */
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Document loaded. Happy calculate!');
+
     const input = document.querySelector('input');
+    const historyBlock = document.querySelector('.history');
+
     const activeButtons = Array.of(...document.querySelectorAll('button'))
         .filter(button => !button.disabled);
     const numbers = activeButtons.filter(item => !Number.isNaN(Number(item.innerText)));
@@ -136,9 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (buttonValue === '=') {
-                setResultValue(inputValue, operation);
-                operation = '';
-                operationValue = 0;
+                if (operation) {
+                    setResultValue(inputValue, operation);
+                    historyBlock.insertAdjacentHTML('beforeend',
+                        `<p class="history_result">${operationValue} ${operation} ${inputValue} = ${input.value}</p>`)
+                    operation = '';
+                    operationValue = 0;
+                }
             }
         })
     });
